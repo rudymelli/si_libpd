@@ -1,0 +1,10 @@
+#N canvas 0 0 450 300 10;
+#X obj 30 95 pix_convolve 3 3;
+#X msg 41 65 1 1 1 1 1 1 1 1 1;
+#X obj 40 40 loadbang;
+#X obj 26 12 inlet gemlist;
+#X obj 28 124 outlet gemlist;
+#X connect 0 0 4 0;
+#X connect 1 0 0 2;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;

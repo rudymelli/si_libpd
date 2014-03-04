@@ -1,0 +1,16 @@
+#N canvas 0 0 320 226 10;
+#X text 125 131 Radice[Distanza tra 2 punti = [(x2-x1)^2 + (y2-y1)^2]
+;
+#X floatatom 82 170 5 0 0 0 - - -;
+#X obj 6 11 inlet x1;
+#X obj 70 11 inlet y1;
+#X obj 158 13 inlet x2;
+#X obj 220 13 inlet y2;
+#X obj 82 213 outlet distanza;
+#X obj 82 106 expr sqrt(pow($f3-$f1 \, 2)+pow($f4-$f2 \, 2));
+#X connect 1 0 6 0;
+#X connect 2 0 7 0;
+#X connect 3 0 7 1;
+#X connect 4 0 7 2;
+#X connect 5 0 7 3;
+#X connect 7 0 1 0;

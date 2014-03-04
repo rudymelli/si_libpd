@@ -1,0 +1,45 @@
+#N canvas 32 199 450 407 10;
+#X obj 79 293 pix_duotone;
+#X obj 225 121 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1980 1;
+#X floatatom 330 121 5 0 0 1 Th - -;
+#X obj 248 42 loadbang;
+#X text 218 137 Soglia_background_suppression;
+#X obj 312 103 bng 15 250 50 0 empty empty reset 17 7 0 10 -262144
+-1 -1;
+#X obj 313 9 inlet reset;
+#X obj 222 10 inlet soglia;
+#X obj 79 12 inlet gemlist;
+#X obj 79 163 pix_background;
+#X obj 79 371 outlet gemlist;
+#X obj 221 291 outlet pix_background;
+#X msg 100 269 0 0 0;
+#X obj 100 247 loadbang;
+#X text 41 311 Binarizzazione \, mostra la maschera binaria settando
+bianco ogni pix > 0;
+#X msg 94 141 reset;
+#X text 91 125 Memorizza bkg;
+#X obj 74 201 cnv 15 100 25 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X text 179 194 Necessario per poter visualizzare l'uscita di pix_background
+\, altrimenti lo posso togliere!;
+#X obj 79 71 pix_rgba;
+#X msg 248 66 0.2;
+#X obj 78 204 si_gem_switch2;
+#X connect 0 0 10 0;
+#X connect 1 0 2 0;
+#X connect 2 0 9 1;
+#X connect 3 0 20 0;
+#X connect 5 0 15 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 8 0 19 0;
+#X connect 9 0 21 0;
+#X connect 12 0 0 1;
+#X connect 13 0 12 0;
+#X connect 15 0 9 0;
+#X connect 19 0 9 0;
+#X connect 20 0 1 0;
+#X connect 21 0 0 0;
+#X connect 21 1 11 0;
+#X coords 0 -1 1 1 160 40 1 220 100;

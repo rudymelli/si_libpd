@@ -1,0 +1,12 @@
+#N canvas 12 277 450 300 10;
+#X obj 16 85 pix_duotone;
+#X obj 37 30 loadbang;
+#X text 88 78 Binarizzazione \, mostra la maschera binaria settando
+bianco ogni pix > 0;
+#X obj 16 5 inlet;
+#X obj 16 119 outlet;
+#X msg 37 55 0 0 0;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 3 0 0 0;
+#X connect 5 0 0 1;

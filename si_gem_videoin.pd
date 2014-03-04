@@ -1,0 +1,56 @@
+#N canvas 108 183 467 339 10;
+#X obj 18 -53 gemhead;
+#X obj 18 136 pix_video;
+#X msg 41 107 dialog;
+#X msg 61 4 device 0;
+#N canvas 162 133 570 420 serin 0;
+#X obj 182 62 cnv 20 16 16 empty \$0-open-canvas 0 4 10 0 14 -233017
+-1 0;
+#X obj 60 65 hradio 15 1 1 8 empty empty empty 0 -6 0 8 -225271 -1
+-1 0;
+#X obj 60 13 inlet;
+#X msg 200 202 label \$1;
+#X obj 200 180 makefilename %d;
+#X obj 59 108 int;
+#X obj 59 337 outlet;
+#X msg 201 306 set \$1 \$2;
+#X obj 59 266 trigger bang anything;
+#X obj 201 286 list;
+#X obj 200 225 send \$0-open-canvas;
+#X msg 60 210 device \$1;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 10 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 5 0 11 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 8 1 9 0;
+#X connect 9 0 7 0;
+#X connect 11 0 8 0;
+#X coords 0 -1 1 1 145 25 2 60 60;
+#X restore 102 45 pd serin;
+#X obj 102 72 bng 15 250 50 0 empty empty open_setting 17 7 0 9 -262144
+-1 -1;
+#X obj 18 178 outlet;
+#X obj 18 -80 inlet;
+#X text 16 -112 Inserendo come messaggio [set 10[ si settera' l'ordine
+di rendering a 10;
+#X obj 102 -61 inlet;
+#X text 140 -61 Numero device;
+#X obj 121 177 outlet;
+#X text 166 176 Cambio dispositivo;
+#X obj 121 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 3 0 13 0;
+#X connect 4 0 3 0;
+#X connect 5 0 2 0;
+#X connect 7 0 0 0;
+#X connect 9 0 4 0;
+#X connect 13 0 11 0;
+#X coords 0 -1 1 1 150 60 1 100 30;
