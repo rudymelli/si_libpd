@@ -1,4 +1,4 @@
-#N canvas 0 0 450 300 10;
+#N canvas 0 0 272 191 10;
 #X obj 69 46 inlet;
 #X obj 69 92 pix_separator;
 #X obj 69 118 separator;

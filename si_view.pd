@@ -1,4 +1,4 @@
-#N canvas 565 51 450 300 10;
+#N canvas 24 53 285 301 10;
 #X msg 97 176 -2;
 #X obj 84 8 inlet quadrant[0-3];
 #X obj 15 63 \$1;

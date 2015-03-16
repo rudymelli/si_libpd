@@ -1,4 +1,4 @@
-#N canvas 574 264 450 399 10;
+#N canvas 479 215 450 399 10;
 #X obj 28 335 pix_rectangle;
 #X obj 28 44 inlet;
 #X text 25 20 gem list;
@@ -42,6 +42,7 @@
 #X obj 103 290 si_gem_randomcolor;
 #X obj 340 47 inlet;
 #X text 338 28 new_random_color;
+#X obj 354 72 loadbang;
 #X connect 0 0 12 0;
 #X connect 1 0 7 0;
 #X connect 3 0 16 1;
@@ -80,4 +81,5 @@
 #X connect 38 0 37 0;
 #X connect 39 0 0 2;
 #X connect 40 0 39 0;
+#X connect 42 0 39 0;
 #X coords 0 0 1 1 150 100 0;
