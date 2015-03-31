@@ -1,0 +1,22 @@
+#N canvas 19 45 523 621 10;
+#X obj 10 4 cnv 15 300 60 empty empty [Libreria_si_libpd]_v0.9 20 12
+0 16 -260097 -1 0;
+#X obj 11 86 si_gemwin;
+#X text 177 94 [si_gemwin] (apri/chiudi finestra \, accendi/spegni
+luci \, fullscreen);
+#X obj 12 171 si_view 1;
+#X text 106 176 [si_view N] texturizza in un quadrante dello schermo
+selezionabile. N è il numero del quadrante;
+#X obj 13 224 si_4view;
+#X text 72 222 [si_4view] texturizza sui 4 quadranti;
+#X obj 11 255 si_gem_film;
+#X text 96 283 [si_gem_film] per aprire/visualizz. un filmato;
+#X obj 10 360 si_gem_videoin;
+#X text 167 378 [si_gem_videoin] apre la camera;
+#X obj 12 444 si_gem_randomcolor;
+#X text 138 444 [si_gem_randomcolor] generazione di un colore random
+tramite bang;
+#X obj 13 483 si_gem_textrect;
+#X text 202 492 [si_gem_textrect W H X Y Z] W e H dimensioni \, X Y
+Z dimensioni in unità GEM;
+#X text 34 37 Visualizzazione;

@@ -1,0 +1,38 @@
+#N canvas 19 45 523 621 10;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X obj 10 4 cnv 15 300 60 empty empty [Libreria_si_libpd]_v0.9 20 12
+0 16 -260097 -1 0;
+#X obj 9 147 si_pix_singlediff;
+#X text 34 37 Elaborazione;
+#X obj 9 196 si_pix_bkgsup;
+#X text 175 148 [si_pix_singlediff] Single Difference \, elabora i
+frame in ingresso e crea la maschera di segmentazione in funzione del
+moto;
+#X text 175 196 [si_pix_bkgsup] Background Suppression \, elabora i
+frame in ingresso comparandoli con l'immagine dello sfondo e e crea
+la maschera di segmentazione in funzione della presenza;
+#X obj 9 245 si_pix_bkgsup_smart;
+#X text 175 245 [si_pix_bkgsup_smart] Background Suppression Smart.
+E' un [si_pix_bkgsup] in cui lo sfondo è aggiornato automaticamente
+quando non viene rilevato moto (attraverso la [si_singlediff] nei frame
+elaborati;
+#X obj 9 410 si_pix_crop;
+#X text 160 410 [si_pix_crop X Y W H] Estrae dall'immagine di ingresso
+un sotto rettangolo;
+#X obj 12 82 si_gem_switch2;
+#X text 109 76 [si_gem_switch2] \, [si_gem_switch3] \, [si_gem_switch4]
+replicano la catena di rendering separandole indipendentemente;
+#X obj 10 336 si_pix_mblob;
+#X text 139 336 [si_pix_mblob N] Estrae le informazioni del blob N
+da pix_multiblob e lo contorna con un rettangolo colorato;
+#X obj 11 532 si_mousestate;
+#X obj 10 566 si_mousestate_receive;
+#X text 159 532 [si_mousestate] \, rileva la posizione del mouse ed
+invia le coordinate via OSC ad un altra patch anche su un altro PC
+;
+#X text 159 565 [si_mousestate_receive] \, ricevele info sul mouse
+spedite [si_mousestate];
+#X obj 10 481 si_pix_mean;
+#X text 90 481 [si_pix_mean] Effettua l'operazione media dell'immagine
+di ingresso;
