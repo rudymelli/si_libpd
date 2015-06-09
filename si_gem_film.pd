@@ -1,4 +1,4 @@
-#N canvas 22 86 583 407 10;
+#N canvas 515 469 583 407 10;
 #X obj 27 140 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 101 97 bng 15 250 50 0 empty empty Carica 20 8 0 8 -262144 -1
@@ -21,14 +21,14 @@
 #X floatatom 300 276 5 0 0 3 height - -;
 #X obj 115 315 outlet;
 #X obj 73 246 delay 20;
-#X obj 50 72 gemhead;
-#X text 48 -4 Inserendo come messaggio [set 10[ si settera' l'ordine
+#X obj 11 74 gemhead;
+#X text 12 -24 Inserendo come messaggio [set 10[ si settera' l'ordine
 di rendering a 10;
 #X obj 51 213 pix_film;
 #X obj 193 75 loadbang;
 #X msg 193 99 1;
 #X obj 156 27 inlet [0-1]play/pausa;
-#X obj 50 28 inlet gemlist;
+#X obj 11 30 inlet gemlist;
 #X obj 504 28 inlet frame;
 #X obj 441 263 outlet bang end film;
 #X obj 292 27 inlet loop [0-1];
@@ -43,6 +43,7 @@ di rendering a 10;
 -1;
 #X floatatom 60 155 5 0 0 0 - - -;
 #X obj 17 283 pix_rgba;
+#X obj 96 6 inlet pix_film;
 #X connect 1 0 3 0;
 #X connect 2 0 19 0;
 #X connect 3 0 2 0;
@@ -78,4 +79,5 @@ di rendering a 10;
 #X connect 34 0 35 0;
 #X connect 35 0 4 0;
 #X connect 36 0 28 0;
+#X connect 37 0 19 0;
 #X coords 0 -1 1 1 80 90 1 100 80;
